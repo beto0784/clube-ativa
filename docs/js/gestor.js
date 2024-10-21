@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function carregarSociosPendentes() {
-    fetch('http://seu-dominio.com/api/listar_socios_pendentes.php')
+    fetch('https://beto0784.github.io/clube-ativa/api/listar_socios_pendentes.php')
     .then(response => response.json())
     .then(data => {
         const tbody = document.querySelector('#sociosPendentes tbody');
@@ -34,7 +34,7 @@ function rejeitarSocio(id) {
 }
 
 function atualizarStatusSocio(id, status) {
-    fetch('http://seu-dominio.com/api/atualizar_status_socio.php', {
+    fetch('https://beto0784.github.io/clube-ativa/api/atualizar_status_socio.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
