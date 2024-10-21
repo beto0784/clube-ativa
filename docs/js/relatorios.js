@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function carregarAgendamentosPorQuadra() {
-    fetch('http://seu-dominio.com/api/relatorios/agendamentos_por_quadra.php')
+    fetch('https://beto0784.github.io/clube-ativa/api/relatorios/agendamentos_por_quadra.php')
     .then(response => response.json())
     .then(data => {
         const ctx = document.getElementById('agendamentosPorQuadra').getContext('2d');
@@ -32,7 +32,7 @@ function carregarAgendamentosPorQuadra() {
 }
 
 function carregarAgendamentosPorDia() {
-    fetch('http://seu-dominio.com/api/relatorios/agendamentos_por_dia.php')
+    fetch('https://beto0784.github.io/clube-ativa/api/relatorios/agendamentos_por_dia.php')
     .then(response => response.json())
     .then(data => {
         const ctx = document.getElementById('agendamentosPorDia').getContext('2d');
@@ -60,7 +60,7 @@ function carregarAgendamentosPorDia() {
 }
 
 function carregarSociosMaisAtivos() {
-    fetch('http://seu-dominio.com/api/relatorios/socios_mais_ativos.php')
+    fetch('https://beto0784.github.io/clube-ativa/api/relatorios/socios_mais_ativos.php')
     .then(response => response.json())
     .then(data => {
         const tbody = document.querySelector('#sociosMaisAtivos tbody');
