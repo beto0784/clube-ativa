@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function carregarAgendamentosDoDia() {
-    fetch('http://seu-dominio.com/api/agendamentos_do_dia.php')
+    fetch('https://beto0784.github.io/clube-ativa/api/agendamentos_do_dia.php')
     .then(response => response.json())
     .then(data => {
         const tbody = document.querySelector('#agendamentosDia tbody');
@@ -28,7 +28,7 @@ function carregarAgendamentosDoDia() {
 }
 
 function registrarEntrada(agendamentoId) {
-    fetch('http://seu-dominio.com/api/registrar_entrada.php', {
+    fetch('https://beto0784.github.io/clube-ativa/api/registrar_entrada.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function registrarEntrada(agendamentoId) {
 
 function verificarSocio() {
     const busca = document.getElementById('buscarSocio').value;
-    fetch(`http://seu-dominio.com/api/verificar_socio.php?busca=${busca}`)
+    fetch(`https://beto0784.github.io/clube-ativa/api/verificar_socio.php?busca=${busca}`)
     .then(response => response.json())
     .then(data => {
         const resultadoDiv = document.getElementById('resultadoVerificacao');
