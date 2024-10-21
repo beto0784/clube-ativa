@@ -9,7 +9,7 @@ function carregarStatusCadastro() {
     // Assumindo que temos o ID do sócio armazenado em algum lugar (ex: localStorage)
     const socioId = localStorage.getItem('socioId');
 
-    fetch(`http://seu-dominio.com/api/status_cadastro.php?id=${socioId}`)
+    fetch(`https://beto0784.github.io/clube-ativa/api/status_cadastro.php?id=${socioId}`)
     .then(response => response.json())
     .then(data => {
         const statusDiv = document.getElementById('statusCadastro');
@@ -21,7 +21,7 @@ function carregarStatusCadastro() {
 function carregarAgendamentos() {
     const socioId = localStorage.getItem('socioId');
 
-    fetch(`http://seu-dominio.com/api/listar_agendamentos.php?socio_id=${socioId}`)
+    fetch(`https://beto0784.github.io/clube-ativa/api/listar_agendamentos.php?socio_id=${socioId}`)
     .then(response => response.json())
     .then(data => {
         const tbody = document.querySelector('#meusAgendamentos tbody');
@@ -58,7 +58,7 @@ function mostrarCalendario() {
 function buscarHorariosDisponiveis() {
     const data = document.getElementById('dataAgendamento').value;
     
-    fetch(`http://seu-dominio.com/api/horarios_disponiveis.php?data=${data}`)
+    fetch(`https://beto0784.github.io/clube-ativa/api/horarios_disponiveis.php?data=${data}`)
     .then(response => response.json())
     .then(data => {
         const calendarioDiv = document.getElementById('calendarioAgendamento');
@@ -75,7 +75,7 @@ function fazerAgendamento(horario) {
     const socioId = localStorage.getItem('socioId');
     const data = document.getElementById('dataAgendamento').value;
 
-    fetch('http://seu-dominio.com/api/fazer_agendamento.php', {
+    fetch('https://beto0784.github.io/clube-ativa/api/fazer_agendamento.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
