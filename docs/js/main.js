@@ -4,7 +4,7 @@ document.getElementById('cadastroSocio').addEventListener('submit', function(e) 
     const formData = new FormData(this);
     const data = Object.fromEntries(formData);
 
-    fetch('http://seu-dominio.com/api/cadastrar_socio.php', {
+    fetch('https://beto0784.github.io/clube-ativa/api/cadastrar_socio.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
